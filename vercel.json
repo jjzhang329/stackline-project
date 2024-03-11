@@ -2,13 +2,13 @@
     "version": 2,
     "builds": [
         {
-            "src": "server.ts",
+            "src": "server.mjs",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "handle": "vercel"
+            "handle": "resource"
         }
     ]
 }
