@@ -19,7 +19,6 @@ const productSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchProduct.fulfilled, (state, action: PayloadAction<Product>) => {
-                console.log('jijij')
                 state.product = action.payload;
             })
             .addCase(fetchProduct.rejected, (state, action) => {
