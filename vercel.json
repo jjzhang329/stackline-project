@@ -1,21 +1,14 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "server.mjs",
-            "use": "@vercel/node"
+    "functions": {
+        "api/server.js": {
+            "memory": 1024,
+            "includeFiles": "db.json"
         }
-    ],
-    "routes": [
+    },
+    "rewrites": [
         {
-            "handle": "resource"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/server.mjs"
+            "source": "/api/(.*)",
+            "destination": "/api/server.js"
         }
-    ],
-
-    "devCommand": "node server.mjs"
-
+    ]
 }
