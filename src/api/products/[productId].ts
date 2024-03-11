@@ -3,13 +3,13 @@ import fs from 'fs';
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
     const { productId } = req.query;
-
+    console.log('jiohjhiu')
     // Read data from db.json
-    const data = JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
+    const data = JSON.parse(fs.readFileSync('../db.json', 'utf-8'));
 
     // Find product by ID
     const product = data.products.find((p: { id: string }) => p.id === productId);
-    console.log(product)
+
     if (!product) {
         // Product not found
         res.status(404).json({ error: 'Product not found' });
