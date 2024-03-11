@@ -5,7 +5,8 @@ import { dirname, join } from 'path';
 
 const app = express();
 const port = process.env.PORT || 3100;
-
+console.log('Current directory:', process.cwd());
+console.log('port', port)
 const data = JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
