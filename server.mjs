@@ -7,7 +7,6 @@ const app = express();
 const port = process.env.PORT || 3100;
 console.log('Current directory:', process.cwd());
 console.log('port', port)
-const data = JSON.parse(fs.readFileSync('./db.json', 'utf-8'));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 // Serve static files from the 'build' directory
@@ -19,6 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/products/:productId', (req, res) => {
+    const data = JSON.parse(fs.readFileSync(join(__dirname, 'db.json'), 'utf-8'));
     const product = data.products.find((p) => p.id === req.params.productId);
     if (!product) {
         res.status(404).json({ error: 'Product not found' });
