@@ -1,0 +1,68 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+li,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+table,
+caption,
+hr {
+  margin: 0;
+}
+
+/* Remove default padding */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dd,
+p,
+figure,
+blockquote,
+pre,
+iframe,
+table,
+caption,
+th,
+td,
+fieldset {
+  padding: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove text decoration */
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #F6F8FA;
+}
+
