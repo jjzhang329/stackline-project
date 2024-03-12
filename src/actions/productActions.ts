@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { Product } from '../types/product';
 import axios from 'axios';
 
 export const fetchProduct = createAsyncThunk(
@@ -6,5 +7,6 @@ export const fetchProduct = createAsyncThunk(
     async (productId: string) => {
         const response = await axios.get(`/api/getProduct?productId=${productId}`);
         return response.data;
+
     }
 );
